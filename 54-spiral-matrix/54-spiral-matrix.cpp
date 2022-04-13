@@ -14,8 +14,8 @@ public:
     {
         if(dir==0)
         {
-            for(i=L;i<=R;i++)
-                ans.push_back(matrix[T][i]);
+            for(i=L;i<=R;i++){
+                ans.push_back(matrix[T][i]);}
             T++;
         }
         else if(dir==1)

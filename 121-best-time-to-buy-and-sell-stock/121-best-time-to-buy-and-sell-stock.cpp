@@ -3,9 +3,9 @@ public:
     int maxProfit(vector<int>& prices) {
        int maxPro=0;
         int minPrice=prices[0];
-        for(int i=0; i<prices.size() ; i++){
-            minPrice=min(minPrice, prices[i]);
-            maxPro=max(maxPro, prices[i]-minPrice);
+        for(auto it: prices){
+            minPrice=min(minPrice, it);
+            maxPro=max(maxPro, it-minPrice);
         }
         return maxPro;
     }

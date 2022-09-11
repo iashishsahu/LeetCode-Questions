@@ -9,12 +9,19 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        unordered_set<ListNode*> hashTable;
-    while(head != NULL) {
-        if(hashTable.find(head) != hashTable.end()) return true;
-        hashTable.insert(head);
-        head = head->next;
-    }
-    return false;
+        while(head==NULL || head->next==NULL)
+            return false;
+            
+            ListNode *fast= head;
+            ListNode *slow= head;
+        
+        while(fast->next && fast-> next-> next){
+            fast=fast->next->next;
+            slow= slow->next;
+            if(fast==slow)
+                return true;
+        }
+        return false;
+            
     }
 };

@@ -8,13 +8,10 @@ public:
         int n = nums.size(); 
         sort(nums.begin(),nums.end());
     
-        for (int i = 0; i < n; i++) {
-        
-           long long int target_3 = target - nums[i];
-        
+        for (int i = 0; i < n; i++) {  
+            long long int target_1=target-nums[i];
             for (int j = i + 1; j < n; j++) {
-            
-              long long  int target_2 = target_3 - nums[j];
+              long long  int target_2 = target_1 - nums[j];
             
                 int front = j + 1;
                 int back = n - 1;

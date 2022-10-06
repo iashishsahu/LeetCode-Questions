@@ -27,9 +27,9 @@ public:
     }
     
     bool empty() {
-        if(q1.empty()==true)
-            return true;
-        else return false;
+        if(!q1.empty())
+            return false;
+        else return true;
     }
 };
 
